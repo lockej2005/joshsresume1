@@ -46,6 +46,7 @@ class Home extends React.Component {
         <Link to="/" className="solution-btn" style={{ textDecoration: 'none', marginTop:'20px' }}>Go back to Home</Link>
         </div>
         <p>This is the landing page.</p>
+        <h1>final test e</h1>
         <h1>test blurrrrrrr</h1>
         <h1>final test</h1>
         <h1>main?</h1>
