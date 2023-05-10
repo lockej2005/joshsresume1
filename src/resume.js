@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import './App.css'; // Import your CSS file
-import Home from "./home"
+
 
 function Resume() {
     const navigate = useNavigate();
