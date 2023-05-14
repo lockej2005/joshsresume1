@@ -32,7 +32,7 @@ jobs:
         with:
           # Filename for archive
           filename: release.zip
-          path: ./src/*
+          path: ./src
 
       
       - name: Upload artifact for deployment job
