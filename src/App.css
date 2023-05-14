@@ -164,3 +164,29 @@ body {
   border-color: green;
   box-shadow: 0 0 5px 2px rgba(0, 128, 0, 0.5);
 }
+
+
+/* Push back buttons*/
+.push-back-button {
+  font-family: 'Source Code Pro', monospace;
+  color: #24e344;
+  background-color: #111;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px #24e344;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.push-back-button:hover {
+  animation: onHover 1s;
+  box-shadow: 0 0 25px #24e344;
+}
+
+@keyframes onHover {
+  100% {
+    box-shadow: 0 0 25px #24e344;
+  }
+}

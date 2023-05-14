@@ -8,7 +8,7 @@ function Resume() {
     const navigateToHome = () => {
       navigate('/home');
     };
-
+ 
   return (
     <div className="App">
       <div className="resume">

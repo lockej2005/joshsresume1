@@ -43,13 +43,9 @@ class Home extends React.Component {
       <div style={{ width: '900px', margin: '0 auto' }}>
         <div style={{ display: 'flex', flexDirection: 'row', marginTop:'20px' }}>
         <h1 style={{ marginRight: '50px' }}>Lawn Mowing Booking Service</h1>
-        <Link to="/" className="solution-btn" style={{ textDecoration: 'none', marginTop:'20px' }}>Go back to Home</Link>
+        <Link to="/resume" className="solution-btn" style={{ textDecoration: 'none', marginTop:'20px' }}>Go back to Home</Link>
         </div>
-        <p>This is the landing page.</p>
-        <h1>final test e</h1>
-        <h1>test blurrrrrrr</h1>
-        <h1>final test</h1>
-        <h1>main?</h1>
+        <Link to="/admin" className="solution-btn" style={{ textDecoration: 'none', marginTop:'20px' }}>Admin Page</Link>
         <h2>Calendar</h2>
         <p>Total Cost: ${totalCost}</p>
         <SelectedDayContext.Provider value={selectedDay}>
