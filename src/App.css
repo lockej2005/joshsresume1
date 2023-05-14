@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap');
 .App {
-
+  /* Add the following styles to enable zooming on mobile devices */
+  @media only screen and (max-width: 767px) {
+    zoom: 0.8; /* Adjust the zoom level as per your preference */
+    -moz-transform: scale(0.8);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.8);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.8);
+    -webkit-transform-origin: 0 0;
+  }
 }
 input[type="number"],
 textarea {
