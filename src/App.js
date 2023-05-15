@@ -1,10 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Switch, Route } from 'react-router-dom';
 import './App.css'; // Import your CSS file
 import Home from './home';
 import Resume from './resume';
 import Day from './day';
 import Admin from './admin'
+import routes from './routes.json';
+
 
 function App() {
   return (
