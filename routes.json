@@ -1,0 +1,19 @@
+{
+  "routes": [
+      {
+          "route": "/resume",
+          "serve": "/resume.js",
+          "statusCode": 200
+      },
+      {
+          "route": "/home",
+          "serve": "/home.js",
+          "statusCode": 200
+      },
+      {
+          "route": "/*",
+          "serve": "/index.html",
+          "statusCode": 200
+      }
+  ]
+}
