@@ -1,20 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { SelectedDayContext } from './home';
-import './App.css';
-import daysData from './days.json';
+import axios from 'axios';
 
 const Day = () => {
   const { day } = useParams();
   const selectedDay = useContext(SelectedDayContext);
 
-  // Find the day object with matching day number
-  const dayObject = daysData.find((item) => item.day === parseInt(day));
-
-  // Retrieve the day name if the day object is found, otherwise use an empty string
-  const dayName = dayObject ? dayObject.dayName : '';
-  const timesAvailable = dayObject ? dayObject.timesAvailable : [];
-
+  const [timesAvailable, setTimesAvailable] = useState([]);
   const [selectedTimes, setSelectedTimes] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const [depositAmount, setDepositAmount] = useState(0);
@@ -28,6 +21,22 @@ const Day = () => {
       setSelectedTimes([...selectedTimes, time]);
     }
   };
+
+  // Fetch the available times from the API based on the day
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8080/api/appointments`) // Replace with the appropriate API endpoint to fetch all appointments
+      .then((response) => {
+        const appointmentsData = response.data;
+        const availableTimes = appointmentsData
+          .filter((appointment) => appointment.bookingID === parseInt(day))
+          .map((appointment) => appointment.time);
+        setTimesAvailable(availableTimes);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, [day]);
 
   // Calculate the total cost and deposit amount based on the number of selected times
   useEffect(() => {
@@ -43,21 +52,19 @@ const Day = () => {
   return (
     <div>
       <h1>Day {day}</h1>
-      <p>This is the Day page for {dayName}.</p>
+      <p>This is the Day page.</p>
       <p>Selected Day from Home: {selectedDay}</p>
 
       <div className="availability-grid">
         {timesAvailable.map((time, index) => (
-          time.available && (
-            <div
-              key={index}
-              className={`availability-item ${selectedTimes.includes(time) ? 'selected' : ''}`}
-              onClick={() => handleTimeSelection(time)}
-            >
-              {time.time}
-              {selectedTimes.includes(time) && <div className="selected-indicator" />}
-            </div>
-          )
+          <div
+            key={index}
+            className={`availability-item ${selectedTimes.includes(time) ? 'selected' : ''}`}
+            onClick={() => handleTimeSelection(time)}
+          >
+            {time}
+            {selectedTimes.includes(time) && <div className="selected-indicator" />}
+          </div>
         ))}
       </div>
 

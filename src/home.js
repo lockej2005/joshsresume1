@@ -1,5 +1,6 @@
 import React, { createContext } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export const SelectedDayContext = createContext();
 
@@ -10,7 +11,20 @@ class Home extends React.Component {
       selectedSlots: {},
       totalCost: 0,
       selectedDay: null,
+      data: [], // Add a state to store the fetched data
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get('http://localhost:8080/api/appointments') // Make an HTTP GET request to the API endpoint
+      .then((response) => {
+        const data = response.data;
+        this.setState({ data: data });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   handleSlotSelection = (day, slot) => {
@@ -36,17 +50,34 @@ class Home extends React.Component {
   };
 
   render() {
-    const { selectedSlots, totalCost, selectedDay } = this.state;
+    const { selectedSlots, totalCost, selectedDay, data } = this.state;
     const days = [...Array(30)].map((_, i) => i + 1);
+
+
 
     return (
       <div style={{ width: '900px', margin: '0 auto' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', marginTop:'20px' }}>
-        <h1 style={{ marginRight: '50px' }}>Lawn Mowing Booking Service</h1>
-        <Link to="/resume" className="solution-btn" style={{ textDecoration: 'none', marginTop:'20px' }}>Go back to Home</Link>
+        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '20px' }}>
+          <h1 style={{ marginRight: '50px' }}>Lawn Mowing Booking Service</h1>
+          <Link to="/resume" className="solution-btn" style={{ textDecoration: 'none', marginTop: '20px' }}>
+            Go back to Home
+          </Link>
         </div>
-        <Link to="/admin" className="solution-btn" style={{ textDecoration: 'none', marginTop:'20px' }}>Admin Page</Link>
+        <Link to="/admin" className="solution-btn" style={{ textDecoration: 'none', marginTop: '20px' }}>
+          Admin Page
+        </Link>
         <h2>Calendar</h2>
+        <ul>
+  {data.map((item) => (
+    <li key={item.bookingId}>
+      Booking ID: {item.bookingId}<br />
+      Customer Number: {item.customerNumber}<br />
+      Day Number: {item.dayNumber}<br />
+      Time: {item.time}<br />
+      Cost: {item.cost}
+    </li>
+  ))}
+</ul>
         <p>Total Cost: ${totalCost}</p>
         <SelectedDayContext.Provider value={selectedDay}>
           <div className="calendar" style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -58,7 +89,7 @@ class Home extends React.Component {
                 style={{
                   width: '100px',
                   height: '100px',
-                  border: '1px solid #24e344', // Green outline for each grid line
+                  border: '1px solid #24e344',
                   margin: '4px',
                   display: 'flex',
                   alignItems: 'center',
@@ -72,10 +103,9 @@ class Home extends React.Component {
                 <div
                   className="day-number"
                   style={{
-                    
                     padding: '4px',
                     fontSize: '18px',
-                    color: selectedSlots[day] ? 'black' : '#24e344', // Green numbers that don't change color
+                    color: selectedSlots[day] ? 'black' : '#24e344',
                   }}
                 >
                   {day}
@@ -108,6 +138,9 @@ class Home extends React.Component {
             ))}
           </div>
         </SelectedDayContext.Provider>
+        {/* Render the fetched data */}
+        {/* Render the fetched data */}
+
       </div>
     );
   }
