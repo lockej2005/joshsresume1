@@ -66,7 +66,7 @@ class Home extends React.Component {
         <Link to="/admin" className="solution-btn" style={{ textDecoration: 'none', marginTop: '20px' }}>
           Admin Page
         </Link>
-        <h2>Calendar</h2>
+        <h2>Calasdfghjkendar</h2>
         <ul>
   {data.map((item) => (
     <li key={item.bookingId}>
