@@ -2,12 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import './App.css'; // Import your CSS file
 
 function Resume() {
-  const navigate = useNavigate();
-
-  const navigateToHome = () => {
-    navigate('/home');
-  };
-
   return (
     <div className="App">
       <div className="resume">
