@@ -17,10 +17,10 @@ class Home extends React.Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8080/api/appointments') // Make an HTTP GET request to the API endpoint
+      .get('http://localhost:8080/api/appointments') // Make an HTTP GET request to the API endpoint for appointments
       .then((response) => {
         const data = response.data;
-        this.setState({ data: data });
+        this.setState({ data: data.BookingTBL });
       })
       .catch((error) => {
         console.error(error);
@@ -53,8 +53,6 @@ class Home extends React.Component {
     const { selectedSlots, totalCost, selectedDay, data } = this.state;
     const days = [...Array(30)].map((_, i) => i + 1);
 
-
-
     return (
       <div style={{ width: '900px', margin: '0 auto' }}>
         <div style={{ display: 'flex', flexDirection: 'row', marginTop: '20px' }}>
@@ -66,18 +64,22 @@ class Home extends React.Component {
         <Link to="/admin" className="solution-btn" style={{ textDecoration: 'none', marginTop: '20px' }}>
           Admin Page
         </Link>
-        <h2>Calasdfghjkendar</h2>
+        <h2>Calendar</h2>
         <ul>
-  {data.map((item) => (
-    <li key={item.bookingId}>
-      Booking ID: {item.bookingId}<br />
-      Customer Number: {item.customerNumber}<br />
-      Day Number: {item.dayNumber}<br />
-      Time: {item.time}<br />
-      Cost: {item.cost}
-    </li>
-  ))}
-</ul>
+          {data.map((item) => (
+            <li key={item.BookingID}>
+              Booking ID: {item.BookingID}<br />
+              Customer ID: {item.CustomerID}<br />
+              Business ID: {item.BusinessID}<br />
+              Appointment ID: {item.AppointmentID}<br />
+              Address: {item.Address}<br />
+              Hourly Rate: {item.HourlyRate}<br />
+              Total Cost: {item.TotalCost}<br />
+              Notes: {item.Notes}<br />
+              Paid: {item.Paid}
+            </li>
+          ))}
+        </ul>
         <p>Total Cost: ${totalCost}</p>
         <SelectedDayContext.Provider value={selectedDay}>
           <div className="calendar" style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -138,9 +140,6 @@ class Home extends React.Component {
             ))}
           </div>
         </SelectedDayContext.Provider>
-        {/* Render the fetched data */}
-        {/* Render the fetched data */}
-
       </div>
     );
   }

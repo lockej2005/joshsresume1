@@ -20,15 +20,28 @@ const config = {
 app.use(cors()); // Enable CORS for all routes
 
 app.get('/api/appointments', async (req, res) => {
-    try {
-      const poolConnection = await sql.connect(config);
-      const resultSet = await poolConnection.request().query('SELECT * FROM APPOINTMENTS');
-      res.json(resultSet.recordset);
-      poolConnection.close();
-    } catch (err) {
-      console.error(err.message);
-      res.status(500).json({ error: 'Server error' });
+  try {
+    const poolConnection = await sql.connect(config);
+    const queries = [
+      'SELECT * FROM BookingTBL',
+      'SELECT * FROM AppointmentsTBL',
+      'SELECT * FROM CustomerTBL',
+      'SELECT * FROM BusinessTBL'
+    ];
+
+    const results = {};
+    for (const query of queries) {
+      const resultSet = await poolConnection.request().query(query);
+      const tableName = query.split('FROM ')[1];
+      results[tableName] = resultSet.recordset;
     }
+
+    res.json(results);
+    poolConnection.close();
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({ error: 'Server error' });
+  }
 });
 
 app.listen(8080, () => {
