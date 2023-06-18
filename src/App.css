@@ -1,77 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap');
-.App {
-  /* Add the following styles to enable zooming on mobile devices */
-  @media only screen and (max-width: 767px) {
-    zoom: 0.8; /* Adjust the zoom level as per your preference */
-    -moz-transform: scale(0.8);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.8);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.8);
-    -webkit-transform-origin: 0 0;
-  }
-}
-input[type="number"],
-textarea {
-  background-color: black;
-  border: 1px solid #24e344;
-  border-radius: 10px;
-  color: #24e344;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 body {
   display: flex;
   height: 100vh;
-  background-color: black;
-  color: #24e344;
+  background-color: #000000;
+  color: #1467e2;
   font-family: 'Source Code Pro', monospace;
 }
+.ColumnContainer{
+  display:flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .ColumnContainer {
+    flex-direction: column;
+  }
+}
+.experienceFlex {
+  display: grid;
+  grid-template-columns: repeat(6);
+  grid-gap: 20px;
+  padding: 20px;
+  flex: 3;
+}
+.separator {
+  height: 1px;
+  background-color: #1467e2;
+  
+  width: 100%;
+}
 
+.experienceFlex > div {
+  background-color: #141414;
+  padding: 20px;
+}
 .formatted{
-  align-items:flex-start;
+  margin-top: 40px;
+  text-align: start;
+  color: #023c92;
+}
+.referencesContainer {
+  display: grid;
+  grid-template-columns: repeat(6);
+  grid-gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+.referencesContainer > div {
+  background-color: #141414;
+  padding: 20px;
 }
 
 .resume {
   text-align: center;
+  padding: 20px;
 }
 .typewriter {
+  
   display: inline-block;
 }
 
 .typewriter-text {
+  font-size: 36px;
   overflow: hidden; /* Ensures the text is not displayed */
-  border-right: .15em solid #24e344; /* The typewriter cursor */
+  border-right: .15em solid #1467e2; /* The typewriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   animation: typing 1.5s steps(40, end), blink-caret .75s step-end infinite;
 }
@@ -90,112 +83,6 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: #24e344;
-  }
-}
-/*Experience Sections*/
-.experienceFlex {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 20px;
-  font-size: 14px;
-  overflow-x: hidden;
-}
-.exp1, .exp2, .exp3, .exp4, .exp5 {
-  flex: 1;
-}
-
-/*solution button*/
-.solution-btn {
-  font-family: 'Source Code Pro', monospace;
-  color: #24e344;
-  background-color: #111;
-  padding: 20px;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  box-shadow: 0 0 10px #24e344;
-}
-.solution-btn:hover{
-  animation: onHover 1s;
-}
-@keyframes onHover {
-  100%{box-shadow: 0 0 25px #24e344;}
-}
-.calendar {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
-}
-
-.day {
-  border: 1px solid black;
-  padding: 10px;
-  position: relative;
-  cursor: pointer;
-}
-
-.day-square {
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
-}
-
-.time-slots {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-
-/* Select time buttons */
-.availability-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-.availability-item {
-  border: 2px solid transparent;
-  padding: 10px;
-  position: relative;
-  cursor: pointer;
-  transition: border-color 0.3s ease-in-out;
-}
-
-.availability-item.selected {
-  border-color: green;
-  box-shadow: 0 0 5px 2px rgba(0, 128, 0, 0.5);
-}
-
-
-/* Push back buttons*/
-.push-back-button {
-  font-family: 'Source Code Pro', monospace;
-  color: #24e344;
-  background-color: #111;
-  padding: 10px 20px;
-  margin-top: 10px;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  box-shadow: 0 0 10px #24e344;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.push-back-button:hover {
-  animation: onHover 1s;
-  box-shadow: 0 0 25px #24e344;
-}
-
-@keyframes onHover {
-  100% {
-    box-shadow: 0 0 25px #24e344;
+    border-color: #1467e2;
   }
 }
