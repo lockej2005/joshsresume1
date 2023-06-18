@@ -27,7 +27,7 @@ function Resume() {
         <div className='experienceFlex'>
           <div className='exp1'>
             <h3>Experience - Dominos The Gap • Janurary 2019 - December 2022</h3>
-            <p>I’ve been working in fast food for the past 3+ years at Dominos the Gap, I started there when I was 13 and have since adopted skills in customer services, understanding business operations and delivering products that priorities customer satisfaction. I’ve taken on more responsibility over the years and am trusted to deal with customer complaints online and resolving issues over the phone and in-store.</p>
+            <p>I have been working in fast food for the past 3+ years at Dominos the Gap, I started there when I was 13 and have since adopted skills in customer services, understanding business operations and delivering products that priorities customer satisfaction. I’ve taken on more responsibility over the years and am trusted to deal with customer complaints online and resolving issues over the phone and in-store.</p>
           </div>
           <div className='exp2'>
             <h3>Experience - OPUS CONSTRUCTION • 2012 – NOW</h3>
