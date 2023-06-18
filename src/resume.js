@@ -20,7 +20,7 @@ function Resume() {
           <h3>- QUT Bachelors of Information Technology, Major in Computer Science minors in AI and Cybersecurity</h3>
           <h3>- Member of Code Network Club, Passionate about Business and Information Systems that change the world.</h3>
           <h3>- President and Founder of QUT's new AI club, sharing ideas and investigating the intimacies of Artificial Intelligence and Machine Learning.</h3>
-          <h3>- Skills in JavaScript, React, Node.js, HTML/CSS, Python</h3>
+          <h3>- Skills in JavaScript, React, Node.js, HTML/CSS, Python and AI technology</h3>
         </div>
       </div>
       <div className='ColumnContainer'>
