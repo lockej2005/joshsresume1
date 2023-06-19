@@ -4,7 +4,7 @@
 body {
   display: flex;
   height: 100vh;
-  background-color: #000000;
+  background-color: #0d0d0d;
   color: #1467e2;
   font-family: 'Source Code Pro', monospace;
 }
@@ -27,18 +27,19 @@ body {
 .separator {
   height: 1px;
   background-color: #1467e2;
-  
   width: 100%;
 }
 
 .experienceFlex > div {
   background-color: #141414;
   padding: 20px;
+  outline: 1px dotted #1467e2;
+  
 }
 .formatted{
   margin-top: 40px;
   text-align: start;
-  color: #023c92;
+  color: #4687e7;
 }
 .referencesContainer {
   display: grid;
@@ -50,6 +51,7 @@ body {
 .referencesContainer > div {
   background-color: #141414;
   padding: 20px;
+  outline: 1px dotted #1467e2;
 }
 
 .resume {
