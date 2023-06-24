@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Resume/); // Modify the text to match the link text
-  expect(linkElement).toBeInTheDocument();
+  const resumeHeading = screen.getByText("Joshua Locke's Resume");
+  expect(resumeHeading).toBeInTheDocument();
 });
