@@ -13,6 +13,9 @@ body {
   flex-direction: row;
 }
 @media (max-width: 768px) {
+  body {
+    zoom: 0.7; /* Adjust the zoom level as needed */
+  }
   .ColumnContainer {
     flex-direction: column;
   }
@@ -70,6 +73,65 @@ body {
   white-space: nowrap; /* Keeps the content on a single line */
   animation: typing 1.5s steps(40, end), blink-caret .75s step-end infinite;
 }
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-group button {
+  outline: 2px solid #1467e2;
+  background-color: #141414;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  padding: 10px 20px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  animation-fill-mode: forwards;
+}
+
+.button-group button.selected {
+  background-color: #1467e2;
+  color: white;
+}
+
+.button-group button:not(.selected):hover {
+  color: #a0a0a0;
+  transition: 0.3s;
+}
+
+@keyframes slideFill {
+  0% {
+    background-color: blue;
+    color: white;
+    width: 100%;
+  }
+  50% {
+    background-color: blue;
+    color: white;
+    width: 0;
+  }
+  51% {
+    background-color: transparent;
+    color: black;
+    width: 0;
+  }
+  100% {
+    background-color: transparent;
+    color: black;
+    width: 100%;
+  }
+}
+
+.button-group button.slide-animation {
+  animation: slideFill 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
 
 @keyframes typing {
   from {
