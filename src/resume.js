@@ -55,6 +55,12 @@ function Resume() {
           <p>Email firedpistol@outlook.com</p>
           <p>Address 56 St Johns Ave Ashgrove, QLD 4060</p>
         </div>
+        <div className='ref1.5'>
+          <h3>Qualification - Microsoft Certified Azure Fundamentals</h3>
+          <p>Certification Number :I808-2209</p>
+          <p>Earned on: June 24, 2023</p>
+          <img style={ {width: "400px"} } src={require('./azure_cert.png')} alt='azure' />
+        </div>
         <div className='ref2'>
           <h3>Reference - Sarang Patel</h3>
           <p>Franchisee Dominos The Gap</p>
@@ -62,7 +68,7 @@ function Resume() {
           <p>Email thegapdominos@gmail.com</p>
         </div>
         <div className='ref3'>
-          <h3>Reference - Collen Robertson</h3>
+          <h3>Reference - Colleen Murphy</h3>
           <p>GPS Staff Manager</p>
           <p>Ph 0422 222 540</p>
         </div>
