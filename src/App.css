@@ -93,7 +93,17 @@ body {
   
   animation-fill-mode: forwards;
 }
-
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1467e2;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
+  outline: 1px solid #1467e2;
+}
 .button-group button.selected {
   background-color: #1467e2;
   color: white;
