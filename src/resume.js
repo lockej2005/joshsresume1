@@ -91,7 +91,7 @@ function Resume() {
             </div>
             <div className='ref1.5'>
               <h3>Qualification - Microsoft Certified Azure Fundamentals</h3>
-              <p>Certification Number :I808-2209</p>
+              <p>Certification number: 61EM48-876CB5</p>
               <p>Earned on: June 24, 2023</p>
               <img style={ {width: "400px"} } src={require('./azure_cert.png')} alt='azure' />
             </div>
