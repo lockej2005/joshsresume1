@@ -83,6 +83,12 @@ function Resume() {
               <p>Email firedpistol@outlook.com</p>
               <p>Address 56 St Johns Ave Ashgrove, QLD 4060</p>
             </div>
+            <div className='ref1.25'>
+              <h3>Qualification - Microsoft Certified Security Operations Analyst Associate</h3>
+              <p>Certification Number :FJCB64-7D272A</p>
+              <p>Earned on: July 6, 2023</p>
+              <img style={ {width: "400px"} } src={require('./azure_cert1.png')} alt='azure' />
+            </div>
             <div className='ref1.5'>
               <h3>Qualification - Microsoft Certified Azure Fundamentals</h3>
               <p>Certification Number :I808-2209</p>
