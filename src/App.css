@@ -104,6 +104,17 @@ button {
   font-weight: bold;
   outline: 1px solid #1467e2;
 }
+.btnlinkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btnlinkedin button {
+  cursor: pointer;
+  text-decoration: none;
+}
 .button-group button.selected {
   background-color: #1467e2;
   color: white;

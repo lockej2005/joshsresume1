@@ -26,7 +26,11 @@ function Resume() {
           <h3>- QUT Bachelors of Information Technology, Major in Computer Science minors in AI and Cybersecurity with a current GPA of 5.0</h3>
           <h3>- Member of Code Network Club, Passionate about Business and Information Systems that change the world.</h3>
           <h3>- President and Founder of QUT's new AI club, sharing ideas and investigating the intimacies of Artificial Intelligence and Machine Learning.</h3>
-          <h3>- Skills in JavaScript, React, Node.js, HTML/CSS, Python and AI technology</h3>
+          <h3>- Skills in JavaScript, Java, C#, Microsoft Azure, React, Node.js, .NET, Cyber Security, HTML, CSS, Python and AI technology</h3>
+          <h3><a href="https://www.linkedin.com/in/lockej2005/" target="_blank" rel="noopener noreferrer" class="btnlinkedin">
+               <button>Connect with me on LinkedIn</button>
+              </a>
+          </h3>
         </div>
 
         <div className="button-group">
@@ -99,6 +103,11 @@ function Resume() {
               <p>Earned on: June 24, 2023</p>
               <img style={ {width: "400px"} } src={require('./azure_cert.png')} alt='azure' />
             </div>
+            <div className='ref1.25'>
+              <h3>Qualification - Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
+              <p>Earned on: July 8, 2023</p>
+              <img style={ {width: "400px"} } src={require('./linkedin.png')} alt='linkedin Cert' />
+            </div>
             <div className='ref2'>
               <h3>Reference - Sarang Patel</h3>
               <p>Franchisee Dominos The Gap</p>
@@ -109,11 +118,6 @@ function Resume() {
               <h3>Reference - Colleen Murphy</h3>
               <p>GPS Staff Manager</p>
               <p>Ph 0422 222 540</p>
-            </div>
-            <div className='ref4'>
-              <h3>Reference - Mikey Austin</h3>
-              <p>The Gap Tavern</p>
-              <p>Ph 0473 428 334</p>
             </div>
             <div className='ref4'>
               <h3>Qualification - FOOD SAFETY SUPERVISOR</h3>
