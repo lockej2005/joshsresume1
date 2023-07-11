@@ -26,7 +26,7 @@ function Resume() {
           <h3>- QUT Bachelors of Information Technology, Major in Computer Science minors in AI and Cybersecurity with a current GPA of 5.0</h3>
           <h3>- Member of Code Network Club, Passionate about Business and Information Systems that change the world.</h3>
           <h3>- President and Founder of QUT's new AI club, sharing ideas and investigating the intimacies of Artificial Intelligence and Machine Learning.</h3>
-          <h3>- Skills in JavaScript, Java, C#, Microsoft Azure, React, Node.js, .NET, Cyber Security, HTML, CSS, Python and AI technology</h3>
+          <h3>- Skills in JavaScript, Java, C#, DevOps, CI/CD Pipeliens, Microsoft Azure, React, Node.js, .NET, Cyber Security, HTML, CSS, Python and AI technology</h3>
           <h3><a href="https://www.linkedin.com/in/lockej2005/" target="_blank" rel="noopener noreferrer" class="btnlinkedin">
                <button>Connect with me on LinkedIn</button>
               </a>
