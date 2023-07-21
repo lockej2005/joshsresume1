@@ -133,7 +133,7 @@ function Resume() {
             </div>
             <div className='ref4'>
               <h3>Qualification - RSG</h3>
-              <img style={ {width: "400px"} } src={require('./settlement.png')} alt='settlement rd' />
+              <p>PROVIDE RESPONSIBLE GAMBLING SERVICES (SITHGAM001)</p>
             </div>
           </div>
         </div>
